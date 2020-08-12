@@ -1,40 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'package:flutter_again/model/like_num_model.dart';
 class ArticleLikeBar extends StatefulWidget {
-  final int likeNum;
-
-  ArticleLikeBar(this.likeNum);
 
   @override
   State<StatefulWidget> createState() => ArticleLikeBarState();
 }
 
 class ArticleLikeBarState extends State<ArticleLikeBar> {
-  int likNum;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    likNum ??= widget.likeNum;
   }
 
-  void _like() {
-    print('click the btn');
-    setState(() {
-      ++likNum;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+
+    final likeNumModel = Provider.of<LikeNumModel>(context);
+    print('articleLikeBar build ====');
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        GestureDetector(child: Icon(Icons.thumb_up, size: 20,),onTap: _like,),
+        GestureDetector(child: Icon(Icons.thumb_up, size: 20,),onTap: () => likeNumModel.like(),),
         Padding(padding: EdgeInsets.only(right: 5)),
-        Text('$likNum')
+        Text('${likeNumModel.value}')
       ],
     );
   }

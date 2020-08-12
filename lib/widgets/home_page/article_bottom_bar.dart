@@ -11,6 +11,7 @@ class ArticleBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    print('articleBottom bar build-----');
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
@@ -18,6 +19,8 @@ class ArticleBottomBar extends StatelessWidget {
           children: <Widget>[
             Image(
               image: NetworkImage(headImg),
+              width: 20,
+              height: 20,
             ),
             Padding(padding: EdgeInsets.only(left: 5.0)),
             Text(

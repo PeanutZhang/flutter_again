@@ -10,6 +10,7 @@ class ArticleSummaryBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    print('articleSummary build----');
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

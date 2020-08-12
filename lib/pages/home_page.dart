@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget{
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597142833250&di=d22f3fdcc42cde0eb0524b620921d916&imgtype=0&src=http%3A%2F%2Fattachments.gfan.com%2Fforum%2F201604%2F23%2F002205xqdkj84gnw4oi85v.jpg';
   /// 帖子标题
   final UserInfoStruct userInfo = UserInfoStruct('Flutter',
-      'https://i.pinimg.com/originals/1f/00/27/1f0027a3a80f470bcfa5de596507f9f4.png');
+      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597142615066&di=b3f4a7ed2e085d48a35169076f37f6dd&imgtype=0&src=http%3A%2F%2Fwx4.sinaimg.cn%2Forj360%2F6cb22faely1g06wggfj7aj208c08cmx5.jpg');
   /// 帖子概要描述信息
   final ArticleSummaryStruct articleInfo = ArticleSummaryStruct(
       'hi  take your high deep',
@@ -27,6 +27,7 @@ class HomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    print('home page build---');
     return Container(
       child: Column(
         children: <Widget>[
